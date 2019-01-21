@@ -1,0 +1,35 @@
+.mainTab{
+    height: 100%;
+}
+.tabNav{
+    height: 40px;
+    display: flex;
+    background-color:#333333;
+    color: #9da5b4; 
+}
+.tabNavItem{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border:none;
+    background-color: #333333;
+    color:#9da5b4;
+    font-size:1em;
+    padding: 5px 20px;
+    outline:none;
+    cursor: pointer;
+}
+.tabNavItemActive{
+    background-color: #282c34;
+    color:#fff;
+}
+.tabContent{
+    background-color: #282c34;
+    height: 100%;
+}
+.tabContentItem{
+    display: none;
+}
+.tabContentItemActive{
+    display: block;
+}

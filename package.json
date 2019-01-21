@@ -2,7 +2,7 @@
   "name": "electron-ctf-tools",
   "version": "0.0.1",
   "description": "CTF tools with Electron",
-  "main": "main_process.js",
+  "main": "main.js",
   "scripts": {
     "start": "npm-run-all --parallel bundle serve",
     "bundle": "webpack --mode development",
