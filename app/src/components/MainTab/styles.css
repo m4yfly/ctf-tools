@@ -25,10 +25,11 @@
 }
 .tabContent{
     background-color: #282c34;
-    height: 100%;
+    height: calc(100% - 40px);
 }
 .tabContentItem{
     display: none;
+    height: 100%;
 }
 .tabContentItemActive{
     display: block;
