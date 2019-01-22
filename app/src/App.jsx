@@ -2,20 +2,22 @@ import React, {Component} from 'react'
 import {render} from 'react-dom'
 import MainTab from './components/MainTab'
 import MainTabItem from './components/MainTabItem'
-import TabContent from './components/TabContent'
+import DecodeComponent from './components/DecodeComponent'
+import CryptoComponent from './components/CryptoComponent'
+import MiscComponent from './components/MiscComponent'
 
 export default class App extends Component {
     render() {
         return (
             <MainTab>
                 <MainTabItem title="Decode/Encode">
-                    <TabContent>Decode/Encode</TabContent>
+                    <DecodeComponent/>
                 </MainTabItem>
                 <MainTabItem title="Misc">
-                    <TabContent>Misc</TabContent>
+                    <MiscComponent/>
                 </MainTabItem>
                 <MainTabItem title="Crypto/Decrypt">
-                    <TabContent>Crypto/Decrypt</TabContent>
+                    <CryptoComponent/>
                 </MainTabItem>
             </MainTab>
         )

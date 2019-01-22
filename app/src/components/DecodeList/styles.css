@@ -1,0 +1,39 @@
+.main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.left{
+    width: 220px;
+    height: 100%;
+    background-color: #444;
+    display: flex;
+    flex-direction: column;
+}
+.right{
+    width: calc(100% - 220px);
+    height: 100%;
+    background-color: #282c34;
+}
+.listItem{
+    margin:0;
+    padding:0;
+    background-color: #666;
+    height:30px;
+    font-size: 1em;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-width: 1px;
+    border-bottom-color: #ccc;
+    outline: none;
+}
+.listItemActive{
+    background-color:#555;
+}
+.contentItem{
+    display: none;
+}
+.contentItemActive{
+    display: block;
+}
