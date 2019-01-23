@@ -27,6 +27,7 @@
     border-bottom-width: 1px;
     border-bottom-color: #ccc;
     outline: none;
+    cursor: pointer;
 }
 .listItemActive{
     background-color:#555;

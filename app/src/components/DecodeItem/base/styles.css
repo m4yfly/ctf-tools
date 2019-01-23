@@ -1,0 +1,28 @@
+.inlineSelect{
+    display: flex;
+    justify-content: center;
+    margin:10px auto;
+}
+
+.inlineButton{
+    display: flex;
+    justify-content: center;
+}
+
+.mainTextArea{
+    margin:20px auto 10px auto;
+    height:260px;
+    width:100%;
+    outline: none;
+    background-color: #cccccc;
+    font-size: 1em;
+}
+.header{
+    display: flex;
+    font-size:20px;
+}
+
+.main{
+    margin: 20px auto;
+    padding: 0 50px;
+}

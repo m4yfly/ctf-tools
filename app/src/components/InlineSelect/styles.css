@@ -1,0 +1,14 @@
+.main{
+    margin: 0 50px;
+    line-height: 1.2em;
+    display: flex;
+}
+.mainLabel{
+    margin-right: 10px;
+}
+.mainLabel:after{
+    content: ':';
+}
+.mainSelect{
+
+}
