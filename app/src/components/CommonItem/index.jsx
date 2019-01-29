@@ -2,6 +2,8 @@ import React, {Component}  from 'react'
 import styles from './styles.css'
 import InlineSelect from '../InlineSelect'
 import CommonButton from '../CommonButton'
+import {handleContextMenu} from '../Common/CommonContextMenu/ContextMenu'
+
 
 
 export default class CommonItem extends Component {
@@ -29,7 +31,7 @@ export default class CommonItem extends Component {
             <div className={styles.main}>
                 <header className={styles.header}>{this.props.header}</header>
                 <div>
-                    <textarea value={content} onChange={this.handleInput} className={styles.mainTextArea}></textarea>
+                    <textarea value={content} onContextMenu={handleContextMenu} onChange={this.handleInput} className={styles.mainTextArea}></textarea>
                     <div className={styles.inlineSelect}>
                         <InlineSelect label="编码"/>
                     </div>
