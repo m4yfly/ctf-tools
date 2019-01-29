@@ -1,20 +1,23 @@
+var base64 = require('js-base64').Base64;
+var base32 = require('hi-base32');
+
 function base64encode(content) {
-    return Buffer.from(content).toString('base64');
+    return base64.encode(content);
 }
 function base64decode(content){
-    return Buffer.from(content,'base64').toString();
+    return base64.decode(content);
 }
 function base32encode(content) {
-    return "not finished";
+    return base32.encode(content);
 }
 function base32decode(content) {
-    return "not finished";
+    return base32.decode(content);
 }
 function base16encode(content) {
-    return "not finished";
+    return Buffer.from(content).toString('hex');
 }
 function base16decode(content) {
-    return "not finished";
+    return Buffer.from(content,'hex').toString();
 }
 function base36encode(content) {
     return "not finished";
@@ -60,35 +63,40 @@ function baseEncode(content,type){
         type = "base64";
     }
     var result = "";
-    switch(type)
-    {
-        case "base64":
-            result =  base64encode(content);
-            break;
-        case "base32":
-            result = base32encode(content);
-            break;
-        case "base16":
-            result = base16encode(content);
-            break;
-        case "base36":
-            result = base36encode(content);
-            break;
-        case "base58":
-            result = base58encode(content);
-            break;
-        case "base62":
-            result = base62encode(content);
-            break;
-        case "base91":
-            result = base91encode(content);
-            break;
-        case "base92":
-            result = base92encode(content);
-            break;
-        case "base85":
-            result = base85encode(content);
-            break;
+    try {
+        switch(type)
+        {
+            case "base64":
+                result =  base64encode(content);
+                break;
+            case "base32":
+                result = base32encode(content);
+                break;
+            case "base16":
+                result = base16encode(content);
+                break;
+            case "base36":
+                result = base36encode(content);
+                break;
+            case "base58":
+                result = base58encode(content);
+                break;
+            case "base62":
+                result = base62encode(content);
+                break;
+            case "base91":
+                result = base91encode(content);
+                break;
+            case "base92":
+                result = base92encode(content);
+                break;
+            case "base85":
+                result = base85encode(content);
+                break;
+        }
+    }catch(err){
+        console.error("base encode error");
+        result = "base encode error";
     }
     return result;
 }
@@ -97,36 +105,41 @@ function baseDecode(content,type){
         type = "base64";
     }
     var result = "";
-    switch(type)
-    {
-        case "base64":
-            result =  base64decode(content);
-            break;
-        case "base32":
-            result = base32decode(content);
-            break;
-        case "base16":
-            result = base16decode(content);
-            break;
-        case "base36":
-            result = base36decode(content);
-            break;
-        case "base58":
-            result = base58decode(content);
-            break;
-        case "base62":
-            result = base62decode(content);
-            break;
-        case "base91":
-            result = base91decode(content);
-            break;
-        case "base92":
-            result = base92decode(content);
-            break;
-        case "base85":
-            result = base85decode(content);
-            break;
-    }
+    try{
+        switch(type)
+        {
+            case "base64":
+                result =  base64decode(content);
+                break;
+            case "base32":
+                result = base32decode(content);
+                break;
+            case "base16":
+                result = base16decode(content);
+                break;
+            case "base36":
+                result = base36decode(content);
+                break;
+            case "base58":
+                result = base58decode(content);
+                break;
+            case "base62":
+                result = base62decode(content);
+                break;
+            case "base91":
+                result = base91decode(content);
+                break;
+            case "base92":
+                result = base92decode(content);
+                break;
+            case "base85":
+                result = base85decode(content);
+                break;
+        }
+    }catch(err){
+        console.log("base decode error");
+        result = "base decode error";
+    } 
     return result;
 }
 
