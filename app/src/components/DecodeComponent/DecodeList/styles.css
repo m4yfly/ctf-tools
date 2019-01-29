@@ -18,19 +18,20 @@
 .listItem{
     margin:0;
     padding:0;
-    background-color: #666;
+    background-color: #444;
     height:30px;
     font-size: 1em;
     border-top: none;
     border-left: none;
     border-right: none;
     border-bottom-width: 1px;
-    border-bottom-color: #ccc;
+    border-bottom-color: #111;
     outline: none;
     cursor: pointer;
 }
 .listItemActive{
-    background-color:#555;
+    background-color:#666;
+    color:#fff;
 }
 .contentItem{
     display: none;
