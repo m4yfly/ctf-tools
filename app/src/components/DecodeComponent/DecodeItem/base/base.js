@@ -1,6 +1,8 @@
 var base64 = require('js-base64').Base64;
 var base32 = require('hi-base32');
-
+var base36 = require('base36');
+var base58 = require('base58');
+var base62 = require('base62');
 function base64encode(content) {
     return base64.encode(content);
 }
@@ -20,22 +22,23 @@ function base16decode(content) {
     return Buffer.from(content,'hex').toString();
 }
 function base36encode(content) {
-    return "not finished";
+    console.log(content);
+    return base36.base36encode(content);
 }
 function base36decode(content) {
-    return "not finished";
+    return base36.base36decode(content);
 }
 function base58encode(content) {
-    return "not finished";
+    return base58.int_to_base58(content);;
 }
 function base58decode(content) {
-    return "not finished";
+    return base58.base58_to_int(content);
 }
 function base62encode(content) {
-    return "not finished";
+    return base62.encode(content);
 }
 function base62decode(content) {
-    return "not finished";
+    return base62.decode(content);
 }
 function base91encode(content) {
     return "not finished";
