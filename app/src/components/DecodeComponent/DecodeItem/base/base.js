@@ -48,8 +48,81 @@ function base91encode(content) {
 function base91decode(content) {
     return base91.decode(content);
 }
+function base92_chr(val) {
+    if(val < 0 || val >= 91){
+        throw "val must be in [0,91)";
+    }
+    if(val == 0){
+        return '!';
+    }
+    else if (val <= 61){
+        return String.fromCharCode('#'.charCodeAt() + val - 1);
+    }
+    else{
+        return String.fromCharCode('a'.charCodeAt() + val - 62);
+    }
+}
+function base92_ord(val) {
+    var num = val.charCodeAt()
+    if(val == '!'){
+        return 0;
+    }
+    else if('#'.charCodeAt() <= num && num <= '_'.charCodeAt()){
+        return num - '#'.charCodeAt() + 1;
+    }
+    else if('a'.charCodeAt() <= num && num <= '}'.charCodeAt()){
+        return num - 'a'.charCodeAt() + 62;
+    }
+    else{
+        throw 'val is not a base92 character';
+    }
+}
 function base92encode(content) {
-    return "not finished";
+    if(content==""){
+        return '~';
+    }
+    var bitstr = '';
+    var bitfirst = '';
+    while(bitstr.length < 13 && content){
+        bitfirst = parseInt(content[0].charCodeAt()).toString(2);
+        if(bitfirst.length < 8){
+            bitfirst = Array(8-bitfirst.length+1).join('0') + bitfirst;
+        }else if (bitfirst > 8){
+            throw 'error occured in base92encode';
+        }
+        bitstr += bitfirst;
+        content = content.substr(1)
+    }
+    var resstr = '';
+    while(bitstr.length > 13 || bitstr) {
+        var i = parseInt(bitstr.substr(0,13),2);
+        resstr += base92_chr(parseInt(i / 91));
+        resstr += base92_chr(i % 91);
+        bitstr = bitstr.substr(13)
+        while(bitstr.length < 13 && content){
+            bitfirst = parseInt(content[0].charCodeAt()).toString(2);
+            if(bitfirst.length < 8){
+                bitfirst = Array(8-bitfirst.length+1).join('0') + bitfirst;
+            }else if (bitfirst > 8){
+                throw 'error occured in base92encode';
+            }
+            bitstr += bitfirst;
+            content = content.substr(1);
+        }
+    }
+    if(bitstr){
+        if(bitstr.length < 7){
+            bitstr += Array(6 - bitstr.length + 1).join('0');
+            resstr += base92_chr(parseInt(bitstr,2));
+        }
+        else{
+            bitstr += Array(13 - bitstr.length + 1).join('0');
+            var i = parseInt(bitstr,2);
+            resstr += base92_chr(parseInt(i / 91));
+            resstr += base92_chr(i % 91);
+        }
+    }
+    return resstr;
 }
 function base92decode(content) {
     return "not finished";
@@ -100,6 +173,7 @@ function baseEncode(content,type){
                 break;
         }
     }catch(err){
+        console.error(err);
         console.error("base encode error");
         result = "base encode error";
     }

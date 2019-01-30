@@ -10,7 +10,7 @@
   },
   "author": "zer0i3 <i@aiyo.xyz>",
   "repository": "zer0i3/electron-ctf-tools",
-  "license": "Apache License 2.0",
+  "license": "Apache-2.0",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
@@ -29,7 +29,6 @@
     "base36": "^1.0.0",
     "base58": "^2.0.1",
     "base62": "^2.0.0",
-    "base85": "^2.2.0",
     "base91": "0.0.5",
     "hi-base32": "^0.5.0",
     "js-base64": "^2.5.1",
