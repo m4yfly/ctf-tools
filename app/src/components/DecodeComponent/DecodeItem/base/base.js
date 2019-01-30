@@ -3,6 +3,8 @@ var base32 = require('hi-base32');
 var base36 = require('base36');
 var base58 = require('base58');
 var base62 = require('base62');
+var base91 = require('base91');
+
 function base64encode(content) {
     return base64.encode(content);
 }
@@ -41,10 +43,10 @@ function base62decode(content) {
     return base62.decode(content);
 }
 function base91encode(content) {
-    return "not finished";
+    return base91.encode(content);
 }
 function base91decode(content) {
-    return "not finished";
+    return base91.decode(content);
 }
 function base92encode(content) {
     return "not finished";
