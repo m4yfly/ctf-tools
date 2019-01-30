@@ -89,14 +89,14 @@ function base92encode(content) {
         bitfirst = parseInt(content[0].charCodeAt()).toString(2);
         if(bitfirst.length < 8){
             bitfirst = Array(8-bitfirst.length+1).join('0') + bitfirst;
-        }else if (bitfirst > 8){
+        }else if (bitfirst.length > 8){
             throw 'error occured in base92encode';
         }
         bitstr += bitfirst;
         content = content.substr(1)
     }
     var resstr = '';
-    while(bitstr.length > 13 || bitstr) {
+    while(bitstr.length > 13 || content) {
         var i = parseInt(bitstr.substr(0,13),2);
         resstr += base92_chr(parseInt(i / 91));
         resstr += base92_chr(i % 91);
@@ -105,7 +105,7 @@ function base92encode(content) {
             bitfirst = parseInt(content[0].charCodeAt()).toString(2);
             if(bitfirst.length < 8){
                 bitfirst = Array(8-bitfirst.length+1).join('0') + bitfirst;
-            }else if (bitfirst > 8){
+            }else if (bitfirst.length > 8){
                 throw 'error occured in base92encode';
             }
             bitstr += bitfirst;
@@ -127,7 +127,43 @@ function base92encode(content) {
     return resstr;
 }
 function base92decode(content) {
-    return "not finished";
+    var bitstr = '';
+    var resstr = '';
+    if(content == '~'){
+        return '';
+    }
+    var length = parseInt(content.length/2);
+    var resfirst = '';
+    for(let i = 0; i < length; i++){
+        var x = base92_ord(content[2*i])*91 + base92_ord(content[2*i+1]);
+        resfirst = parseInt(x).toString(2);
+        if(resfirst.length < 13){
+            resfirst = Array(13-resfirst.length+1).join('0') + resfirst;
+        }else if (resfirst.length > 13){
+            throw 'error occured in base92decode';
+        }
+        bitstr += resfirst;
+        while(8 <= bitstr.length){
+            resstr += String.fromCharCode(parseInt(bitstr.substr(0,8),2));
+            bitstr = bitstr.substr(8);
+        }
+    }
+    if(content.length % 2 == 1){
+        var x = base92_ord(content.substr(content.length-1));
+        resfirst = parseInt(x).toString(2);
+        if(resfirst.length < 6){
+            resfirst = Array(6-resfirst.length+1).join('0') + resfirst;
+        }else if (resfirst.length > 6){
+            throw 'error occured in base92decode';
+        }
+        bitstr += resfirst;
+        while(8 <= bitstr.length){
+            resstr += String.fromCharCode(parseInt(bitstr.substr(0,8),2));
+            bitstr = bitstr.substr(8);
+        }
+    }
+    return resstr;
+
 }
 function base85encode(content) {
     var message = new Buffer.from(content);
