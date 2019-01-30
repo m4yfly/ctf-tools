@@ -50,6 +50,35 @@ function base91encode(content) {
 function base91decode(content) {
     return base91.decode(content);
 }
+function base92_chr(val) {
+    if(val < 0 || val >= 91){
+        throw "val must be in [0,91)";
+    }
+    if(val == 0){
+        return '!';
+    }
+    else if (val <= 61){
+        return String.fromCharCode('#'.charCodeAt() + val - 1);
+    }
+    else{
+        return String.fromCharCode('a'.charCodeAt() + val - 62);
+    }
+}
+function base92_ord(val) {
+    var num = val.charCodeAt()
+    if(val == '!'){
+        return 0;
+    }
+    else if('#'.charCodeAt() <= num && num <= '_'.charCodeAt()){
+        return num - '#'.charCodeAt() + 1;
+    }
+    else if('a'.charCodeAt() <= num && num <= '}'.charCodeAt()){
+        return num - 'a'.charCodeAt() + 62;
+    }
+    else{
+        throw 'val is not a base92 character';
+    }
+}
 function base92encode(content) {
     if(content==""){
         return '~';
@@ -144,7 +173,6 @@ function base85decode(content) {
     return base85.decode(content);
 }
 
-// base64 base32 base16 base36 base58 base62 base91 base92 base85
 
 function baseEncode(content,type){
     if(!type){
@@ -183,6 +211,7 @@ function baseEncode(content,type){
                 break;
         }
     }catch(err){
+        console.error(err);
         console.error("base encode error");
         result = "base encode error";
     }
