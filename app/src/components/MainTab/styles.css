@@ -1,11 +1,15 @@
 .mainTab{
     height: 100%;
+    background:url('../../assets/background.png') no-repeat center;
+    background-size:cover;
+    font: caption;
 }
 .tabNav{
     height: 40px;
     display: flex;
     background-color:#333333;
     color: #9da5b4; 
+    opacity: 0.9;
 }
 .tabNavItem{
     display: flex;
@@ -14,7 +18,7 @@
     border:none;
     background-color: #333333;
     color:#9da5b4;
-    font-size:1em;
+    font-size:1.3em;
     padding: 5px 20px;
     outline:none;
     cursor: pointer;
@@ -22,10 +26,12 @@
 .tabNavItemActive{
     background-color: #282c34;
     color:#fff;
+    opacity: 0.7;
 }
 .tabContent{
     background-color: #282c34;
     height: calc(100% - 40px);
+    opacity: 0.7;
 }
 .tabContentItem{
     display: none;

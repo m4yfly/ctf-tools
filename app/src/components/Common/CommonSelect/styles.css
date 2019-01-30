@@ -1,14 +1,16 @@
 .main{
     margin: 0 50px;
-    line-height: 1.2em;
     display: flex;
+    align-items: center;
 }
 .mainLabel{
     margin-right: 10px;
+    font-size:1.2em;
+    font-weight: bold;
 }
 .mainLabel:after{
     content: ':';
 }
 .mainSelect{
-
+    font-size:1.1em;
 }

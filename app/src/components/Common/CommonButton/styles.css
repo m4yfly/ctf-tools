@@ -2,7 +2,13 @@
     width:80px;
     min-width: 70px;
     height:30px;
-    font-size:1.1em;
+    font-size:1.2em;
+    font-weight: bold;
     margin: 15px auto;
     cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+}
+.mainButton:hover{
+    box-shadow: 0 0 5px #fff;
 }

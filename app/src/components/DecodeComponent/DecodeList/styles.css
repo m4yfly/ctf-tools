@@ -20,14 +20,17 @@
     padding:0;
     background-color: #444;
     height:30px;
-    font-size: 1em;
+    font-size: 1.2em;
+    font-weight: bold;
     border-top: none;
     border-left: none;
     border-right: none;
+    border-bottom-style:dashed;
     border-bottom-width: 1px;
     border-bottom-color: #111;
     outline: none;
     cursor: pointer;
+    color:#999;
 }
 .listItemActive{
     background-color:#666;

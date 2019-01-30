@@ -14,12 +14,17 @@
     height:260px;
     width:100%;
     outline: none;
-    background-color: #cccccc;
-    font-size: 1em;
+    background-color: #666;
+    font-size: 1.2em;
+    border-color: #000;
+    font-weight: bold;
+}
+.mainTextArea:focus{
+    box-shadow:0 0 10px 5px rgba(255,255,255,.3);
 }
 .header{
     display: flex;
-    font-size:20px;
+    font-size:1.6em;
 }
 
 .main{
