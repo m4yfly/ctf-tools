@@ -26,6 +26,7 @@
     "webpack-cli": "^3.2.1"
   },
   "dependencies": {
+    "base-x": "^3.0.5",
     "base36": "^1.0.0",
     "base58": "^2.0.1",
     "base62": "^2.0.0",

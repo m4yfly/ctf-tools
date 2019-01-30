@@ -33,14 +33,23 @@ export default class CommonItem extends Component {
     }
     render() {
         var content = this.state.content;
+        if (this.props.typeContent){
+            var type_table = (
+                <div className={styles.inlineSelect}>
+                    <CommonSelect label="编码" typeContent={this.props.typeContent} onSelect={this.handleSelect}/>
+                </div>  
+            );
+        }else{
+            var type_table=( 
+                <div></div>
+            );
+        }
         return (
             <div className={styles.main}>
                 <header className={styles.header}>{this.props.header}</header>
                 <div>
                     <textarea value={content} onContextMenu={handleContextMenu} onChange={this.handleInput} className={styles.mainTextArea}></textarea>
-                    <div className={styles.inlineSelect}>
-                        <CommonSelect label="编码" typeContent={this.props.typeContent} onSelect={this.handleSelect}/>
-                    </div>
+                    { type_table }
                     <div className={styles.inlineButton}>
                         <CommonButton onClick={this.handleEncode} buttonName="编码"/>
                         <CommonButton onClick={this.handleDecode} buttonName="解码"/>
