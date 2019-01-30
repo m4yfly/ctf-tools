@@ -3,7 +3,7 @@ var base32 = require('hi-base32');
 var base36 = require('base36');
 var base58 = require('base58');
 var base62 = require('base62');
-var base91 = require('base91');
+var base91 = require('./base91');
 var base85_dic = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!#$%&()*+-;<=>?@^_`{|}~';
 var base85 = require('base-x')(base85_dic);
 
@@ -49,35 +49,6 @@ function base91encode(content) {
 }
 function base91decode(content) {
     return base91.decode(content);
-}
-function base92_chr(val) {
-    if(val < 0 || val >= 91){
-        throw "val must be in [0,91)";
-    }
-    if(val == 0){
-        return '!';
-    }
-    else if (val <= 61){
-        return String.fromCharCode('#'.charCodeAt() + val - 1);
-    }
-    else{
-        return String.fromCharCode('a'.charCodeAt() + val - 62);
-    }
-}
-function base92_ord(val) {
-    var num = val.charCodeAt()
-    if(val == '!'){
-        return 0;
-    }
-    else if('#'.charCodeAt() <= num && num <= '_'.charCodeAt()){
-        return num - '#'.charCodeAt() + 1;
-    }
-    else if('a'.charCodeAt() <= num && num <= '}'.charCodeAt()){
-        return num - 'a'.charCodeAt() + 62;
-    }
-    else{
-        throw 'val is not a base92 character';
-    }
 }
 function base92encode(content) {
     if(content==""){
@@ -130,7 +101,7 @@ function base92decode(content) {
     return "not finished";
 }
 function base85encode(content) {
-    var message = new Buffer.from(content);
+    var message = Buffer.from(content);
     return base85.encode(message);
 }
 function base85decode(content) {
@@ -176,7 +147,6 @@ function baseEncode(content,type){
                 break;
         }
     }catch(err){
-        console.error(err);
         console.error("base encode error");
         result = "base encode error";
     }
