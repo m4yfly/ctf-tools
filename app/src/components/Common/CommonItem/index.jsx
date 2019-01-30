@@ -9,7 +9,10 @@ import {handleContextMenu} from '../CommonContextMenu/ContextMenu'
 export default class CommonItem extends Component {
     constructor(props) {
         super(props);
-        var defaultType = this.props.typeContent.split(" ")[0];
+        var defaultType = null;
+        if (this.props.typeContent){
+            defaultType = this.props.typeContent.split(" ")[0];
+        }
         this.state = {
             content: '',
             typeName: defaultType == "" ? null: defaultType
@@ -38,10 +41,6 @@ export default class CommonItem extends Component {
                 <div className={styles.inlineSelect}>
                     <CommonSelect label="编码" typeContent={this.props.typeContent} onSelect={this.handleSelect}/>
                 </div>  
-            );
-        }else{
-            var type_table=( 
-                <div></div>
             );
         }
         return (
