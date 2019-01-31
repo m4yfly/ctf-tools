@@ -2,7 +2,7 @@ import React, {Component}  from 'react'
 import styles from './styles.css'
 
 
-export default class DecodeList extends Component {
+export default class CommonMainList extends Component {
     constructor(props) {
         super(props);
         this.state = {
