@@ -6,6 +6,7 @@ cache:
     - node_modules
 
 install:
+  - npm cache verify
   - npm install
 
 script:
