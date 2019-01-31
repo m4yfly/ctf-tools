@@ -11,7 +11,7 @@ describe('#base.js',() => {
 
     describe('#decode()',() => {
         it("baseDecode('bmVrb25la28=','base64') should equal nekoneko",() => {
-            assert.strictEqual(baseDecode('bmVrb25la28=','base64'),'nekoneko');
+            assert.strictEqual(baseDecode('bmVrb25la28','base64'),'nekoneko');
         });
     });
 });
