@@ -1,11 +1,11 @@
 import React, {Component}  from 'react'
-import CommenItem from '../../../Common/CommonItem'
+import CommonDecodeItem from '../../../Common/CommonDecodeItem'
 
 
 export default class UrlItem extends Component {
     render() {
         return (
-            <CommenItem header="url"/>
+            <CommonDecodeItem header="url"/>
         )
     }
 }

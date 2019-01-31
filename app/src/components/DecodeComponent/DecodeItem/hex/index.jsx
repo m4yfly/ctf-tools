@@ -1,12 +1,12 @@
 import React, {Component}  from 'react'
 import {hexEncode,hexDecode} from './hex.js'
-import CommenItem from '../../../Common/CommonItem'
+import CommonDecodeItem from '../../../Common/CommonDecodeItem'
 
 
 export default class HexItem extends Component {
     render() {
         return (
-            <CommenItem handleEncode={hexEncode} handleDecode={hexDecode}  header="hex"/>
+            <CommonDecodeItem handleEncode={hexEncode} handleDecode={hexDecode}  header="hex"/>
         )
     }
 }

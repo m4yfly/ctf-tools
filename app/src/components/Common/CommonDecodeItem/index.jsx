@@ -6,7 +6,7 @@ import {handleContextMenu} from '../CommonContextMenu/ContextMenu'
 
 
 
-export default class CommonItem extends Component {
+export default class CommonDecodeItem extends Component {
     constructor(props) {
         super(props);
         var defaultType = null;
