@@ -13,11 +13,11 @@ export default class App extends Component {
                 <MainTabItem title="Decode/Encode">
                     <DecodeComponent/>
                 </MainTabItem>
-                <MainTabItem title="Misc">
-                    <MiscComponent/>
-                </MainTabItem>
                 <MainTabItem title="Crypto/Decrypt">
                     <CryptoComponent/>
+                </MainTabItem>
+                <MainTabItem title="Misc">
+                    <MiscComponent/>
                 </MainTabItem>
             </MainTab>
         )

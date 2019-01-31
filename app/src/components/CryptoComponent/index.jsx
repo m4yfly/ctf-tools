@@ -16,6 +16,7 @@ import DesItem from './CryptoItem/des'
 import EnigmaItem from './CryptoItem/enigma'
 import FourSquareItem from './CryptoItem/foursquare'
 import GronsfeldItem from './CryptoItem/gronsfeld'
+import HashItem from './CryptoItem/hash'
 import HillItem from './CryptoItem/hill'
 import KeywordItem from './CryptoItem/keyword'
 import M209Item from './CryptoItem/m209'
@@ -54,6 +55,7 @@ export default class CryptoComponent extends Component {
                 <EnigmaItem title="恩尼格玛密码"/>
                 <FourSquareItem title="四方密码"/>
                 <GronsfeldItem title="Gronsfeld密码"/>
+                <HashItem title="哈希计算"/>
                 <HillItem title="希尔密码"/>
                 <KeywordItem title="关键字密码"/>
                 <M209Item title="便携式机械密码"/>
