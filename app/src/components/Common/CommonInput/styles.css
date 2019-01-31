@@ -1,3 +1,18 @@
 .input{
-    
+    width:100%;
+    margin:10px 30px;
+    height:30px;
+    background-color: #666;
+    border-color: #000;
+    outline: none;
+    border-width: 1px;
+    color:#000;
+    font-weight: bold;
+    font-size:1.2em;
+}
+.input::-webkit-input-placeholder{
+    color:#222;
+}
+.input:focus{
+    box-shadow:0 0 10px 5px rgba(255,255,255,.3);
 }

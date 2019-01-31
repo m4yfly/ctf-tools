@@ -31,3 +31,7 @@
     margin: 20px auto;
     padding: 0 50px;
 }
+.addition{
+    display: flex;
+    justify-content: space-between;
+}

@@ -5,7 +5,7 @@ import styles from './styles.css'
 export default class CommonInput extends Component {
     render() {
         return (
-            <input className={styles.input} onInput={this.props.onInput} placeholder={this.props.placeholder}/>
+            <input value={this.props.value} className={styles.input} onChange={this.props.handleInput} placeholder={this.props.placeholder}/>
         )
     }
 }

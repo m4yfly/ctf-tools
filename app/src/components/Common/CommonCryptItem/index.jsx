@@ -5,7 +5,7 @@ import {handleContextMenu} from '../CommonContextMenu/ContextMenu'
 
 
 
-export default class CommonDecodeItem extends Component {
+export default class CommonCryptItem extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -30,7 +30,7 @@ export default class CommonDecodeItem extends Component {
             <div className={styles.main}>
                 <header className={styles.header}>{this.props.header}</header>
                 <div>
-                    <textarea value={content} onContextMenu={handleContextMenu} onInput={this.handleInput} className={styles.mainTextArea}></textarea>
+                    <textarea value={content} onContextMenu={handleContextMenu} onChange={this.handleInput} className={styles.mainTextArea}></textarea>
                     <div className={styles.inlineButton}>
                         <CommonButton onClick={this.handleEncrypt} buttonName="加密"/>
                         <CommonButton onClick={this.handleDecrypt} buttonName="解密"/>
