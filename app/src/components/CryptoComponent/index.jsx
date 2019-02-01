@@ -28,7 +28,7 @@ import PublicKeyItem from './CryptoItem/publickey'
 import RailFenceItem from './CryptoItem/railfence'
 import RC4Item from './CryptoItem/rc4'
 import Rot13Item from './CryptoItem/rot13'
-import RSAKeyExportItem from './CryptoItem/rsakeyexport'
+import RSAKeyAnalyseItem from './CryptoItem/rsakeyanalyse'
 import RSAKeyGenerateItem from './CryptoItem/rsakeygenerate'
 import RunningItem from './CryptoItem/running'
 import SimpleItem from './CryptoItem/simplesubstitution'
@@ -40,7 +40,7 @@ export default class CryptoComponent extends Component {
     render() {
         return (
             <CommonMainList>
-                <RSAKeyExportItem title="RSA公私钥解析"/>
+                <RSAKeyAnalyseItem title="RSA公私钥解析"/>
                 <RSAKeyGenerateItem title="RSA公私钥生成"/>
                 <A1z26Item title="A1z26密码"/>
                 <AdfgvxItem title="ADFGVX密码"/>

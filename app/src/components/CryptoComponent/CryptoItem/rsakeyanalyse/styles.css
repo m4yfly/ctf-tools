@@ -1,0 +1,42 @@
+.mainTextArea{
+    /* margin:10px auto 10px auto; */
+    color: #c8eaea;
+    height:260px;
+    width:100%;
+    outline: none;
+    background-color: #666;
+    font-size: 1.2em;
+    border-color: #000;
+    font-weight: bold;
+}
+
+.mainTextArea:focus{
+    box-shadow:0 0 10px 5px rgba(255,255,255,.3);
+}
+
+.header{
+    display: flex;
+    font-size:1.6em;
+}
+
+.main{
+    margin: 20px auto;
+    padding: 0 50px;
+}
+
+
+.Button{
+    width:180px;
+    min-width: 70px;
+    height:30px;
+    font-size:1.2em;
+    font-weight: bold;
+    margin: 15px auto;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+}
+.Button:hover{
+    box-shadow: 0 0 5px #fff;
+}
+

@@ -9,7 +9,7 @@ export default class RSAKeyGenerateItem extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            n_length:'512',
+            n_length:'1024',
             e:'65537',
             publick_key:'',
             private_key:'',
