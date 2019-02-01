@@ -28,7 +28,8 @@ import PublicKeyItem from './CryptoItem/publickey'
 import RailFenceItem from './CryptoItem/railfence'
 import RC4Item from './CryptoItem/rc4'
 import Rot13Item from './CryptoItem/rot13'
-import RSAKeyItem from './CryptoItem/rsakey'
+import RSAKeyExportItem from './CryptoItem/rsakeyexport'
+import RSAKeyGenerateItem from './CryptoItem/rsakeygenerate'
 import RunningItem from './CryptoItem/running'
 import SimpleItem from './CryptoItem/simplesubstitution'
 import TerpleDesItem from './CryptoItem/terpledes'
@@ -39,6 +40,8 @@ export default class CryptoComponent extends Component {
     render() {
         return (
             <CommonMainList>
+                <RSAKeyExportItem title="RSA公私钥解析"/>
+                <RSAKeyGenerateItem title="RSA公私钥生成"/>
                 <A1z26Item title="A1z26密码"/>
                 <AdfgvxItem title="ADFGVX密码"/>
                 <AdfgxItem title="ADFGX密码"/>
@@ -67,7 +70,6 @@ export default class CryptoComponent extends Component {
                 <RailFenceItem title="栅栏密码"/>
                 <RC4Item title="栅栏密码"/>
                 <Rot13Item title="Rot13密码"/>
-                <RSAKeyItem title="RSA私钥解析"/>
                 <RunningItem title="滚动秘钥密码"/>
                 <SimpleItem title="简单换位密码"/>
                 <TerpleDesItem title="Terple DES加密"/>

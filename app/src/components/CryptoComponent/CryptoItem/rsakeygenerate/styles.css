@@ -1,0 +1,136 @@
+.inlineTextArea{
+    display: flex;
+    justify-content: space-between;
+}
+
+.inlineButton{
+    display: flex;
+    justify-content: center;
+}
+
+.inlineInput{
+    display: flex;
+    justify-content: space-between;
+}
+.PublicKeyArea{
+    /* margin:10px auto 10px auto; */
+    color: #c8eaea;
+    height:260px;
+    width:100%;
+    outline: none;
+    background-color: #666;
+    font-size: 1.2em;
+    border-color: #000;
+    font-weight: bold;
+}
+
+.PrivateKeyArea{
+    /* margin:10px auto 10px auto; */
+    color: #c8eaea;
+    margin-left: 20px;
+    height:260px;
+    width:100%;
+    outline: none;
+    background-color: #666;
+    font-size: 1.2em;
+    border-color: #000;
+    font-weight: bold;
+}
+
+.ParameterArea{
+    color: #c8eaea;
+    box-sizing: border-box;
+    margin:20px auto 10px auto;
+    height:260px;
+    width:100%;
+    outline: none;
+    background-color: #666;
+    font-size: 1.2em;
+    border-color: #000;
+    font-weight: bold;
+}
+.mainTextArea:focus{
+    box-shadow:0 0 10px 5px rgba(255,255,255,.3);
+}
+.header{
+    display: flex;
+    font-size:1.6em;
+}
+
+.main{
+    margin: 20px auto;
+    padding: 0 50px;
+}
+
+.addition{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Button1{
+    width:180px;
+    min-width: 70px;
+    height:30px;
+    font-size:1.2em;
+    font-weight: bold;
+    margin: 15px auto;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+}
+.Button1:hover{
+    box-shadow: 0 0 5px #fff;
+}
+
+.Button2{
+    width:180px;
+    min-width: 70px;
+    height:30px;
+    font-size:1.2em;
+    font-weight: bold;
+    margin: 15px auto;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+}
+.Button2:hover{
+    box-shadow: 0 0 5px #fff;
+}
+
+.input1{
+    width:100%;
+    margin:10px 30px;
+    height:30px;
+    background-color: #666;
+    border-color: #000;
+    outline: none;
+    border-width: 1px;
+    color:#000;
+    font-weight: bold;
+    font-size:1.2em;
+}
+.input1::-webkit-input-placeholder{
+    color:#222;
+}
+.input1:focus{
+    box-shadow:0 0 10px 5px rgba(255,255,255,.3);
+}
+
+.input2{
+    width:100%;
+    margin:10px 30px;
+    height:30px;
+    background-color: #666;
+    border-color: #000;
+    outline: none;
+    border-width: 1px;
+    color:#000;
+    font-weight: bold;
+    font-size:1.2em;
+}
+.input2::-webkit-input-placeholder{
+    color:#222;
+}
+.input2:focus{
+    box-shadow:0 0 10px 5px rgba(255,255,255,.3);
+}
