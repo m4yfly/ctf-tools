@@ -1,5 +1,5 @@
 # Electron-CTF-Tool
-[![Build Status](https://travis-ci.org/zer0i3/electron-ctf-tools.svg?branch=master)](https://travis-ci.org/zer0i3/electron-ctf-tools) ![](https://img.shields.io/github/license/zer0i3/electron-ctf-tools.svg?style=flat)
+[![Build Status](https://travis-ci.org/zer0i3/electron-ctf-tools.svg?branch=master)](https://travis-ci.org/zer0i3/electron-ctf-tools) [![](https://img.shields.io/github/license/zer0i3/electron-ctf-tools.svg?style=flat)](https://github.com/zer0i3/electron-ctf-tools/blob/master/LICENSE)
 
 基于Electron的CTF常用工具集，主要以编解码及加解密算法为主
 
