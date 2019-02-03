@@ -20,13 +20,12 @@ function base32decode(content) {
     return base32.decode(content);
 }
 function base16encode(content) {
-    return Buffer.from(content).toString('hex');
+    return Buffer.from(content).toString('hex').toUpperCase();
 }
 function base16decode(content) {
     return Buffer.from(content,'hex').toString();
 }
 function base36encode(content) {
-    console.log(content);
     return base36.base36encode(content);
 }
 function base36decode(content) {
@@ -48,7 +47,7 @@ function base91encode(content) {
     return base91.encode(content);
 }
 function base91decode(content) {
-    return base91.decode(content);
+    return base91.decode(content).toString();
 }
 function base92_chr(val) {
     if(val < 0 || val >= 91){
@@ -170,7 +169,7 @@ function base85encode(content) {
     return base85.encode(message);
 }
 function base85decode(content) {
-    return base85.decode(content);
+    return base85.decode(content).toString();
 }
 
 
