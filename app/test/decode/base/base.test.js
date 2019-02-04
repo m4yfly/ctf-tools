@@ -28,9 +28,9 @@ describe('#base.js',() => {
        it("baseEncode('zer0i3','base92') should equal M%_;g*W|",() => {
             assert.strictEqual(baseEncode('zer0i3','base92'),'M%_;g*W|');
        });
-    //    it("baseEncode('zer0i3','base85') should equal dS!AjX)^",() => {
-    //         assert.strictEqual(baseEncode('zer0i3','base85'),'dS!AjX)^');
-    //    });
+       it("baseEncode('zer0i3','base85') should equal dS!AjX)^",() => {
+            assert.strictEqual(baseEncode('zer0i3','base85'),'dS!AjX)^');
+       });
     });
 
     describe('#decode()',() => {
@@ -58,8 +58,8 @@ describe('#base.js',() => {
         it("baseDecode('M%_;g*W|','base92') should equal zer0i3",() => {
             assert.strictEqual(baseDecode('M%_;g*W|','base92'),'zer0i3');
         });
-        // it("baseDecode('dS!AjX)^','base85') should equal zer0i3",() => {
-        //     assert.strictEqual(baseDecode('dS!AjX)^','base85'),'zer0i3');
-        // });
+        it("baseDecode('dS!AjX)^','base85') should equal zer0i3",() => {
+            assert.strictEqual(baseDecode('dS!AjX)^','base85'),'zer0i3');
+        });
     });
 });

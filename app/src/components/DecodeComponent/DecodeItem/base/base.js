@@ -4,8 +4,7 @@ var base36 = require('base36');
 var base58 = require('base58');
 var base62 = require('base62');
 var base91 = require('./base91');
-var base85_dic = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!#$%&()*+-;<=>?@^_`{|}~';
-var base85 = require('base-x')(base85_dic);
+var base85 = require('./base85');
 
 function base64encode(content) {
     return base64.encode(content);
@@ -165,8 +164,7 @@ function base92decode(content) {
 
 }
 function base85encode(content) {
-    var message = Buffer.from(content);
-    return base85.encode(message);
+    return base85.encode(content);
 }
 function base85decode(content) {
     return base85.decode(content).toString();
