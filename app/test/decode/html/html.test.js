@@ -11,7 +11,7 @@ describe('#html.js',() => {
 
     describe('#decode()',() => {
         it("htmlDecode('asdf &amp; &yuml; &uuml; &apos;') should equal asdf & ÿ ü '",() => {
-            assert.strictEqual(htmlDecode('asdf &amp; &yuml; &uuml; &apos;',''),"asdf & ÿ ü '");
+            assert.strictEqual(htmlDecode('asdf &amp; &yuml; &uuml; &apos;'),"asdf & ÿ ü '");
         });
     });
 });
