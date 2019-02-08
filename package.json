@@ -37,6 +37,7 @@
     "node-rsa": "^1.0.3",
     "quoted-printable": "^1.0.1",
     "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react-dom": "^16.7.0",
+    "tapnode": "^1.0.1"
   }
 }
