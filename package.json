@@ -38,6 +38,7 @@
     "quoted-printable": "^1.0.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "tapnode": "^1.0.1"
+    "tapnode": "^1.0.1",
+    "xmorse": "0.0.4"
   }
 }
