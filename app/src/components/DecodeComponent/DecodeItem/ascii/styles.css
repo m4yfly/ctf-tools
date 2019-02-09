@@ -1,0 +1,24 @@
+.contentItem{
+    width:100%;
+    margin-top:30px;
+    height:110px;
+    display:flex;
+}
+.contentLabel{
+    width:100px;
+    font-size:1.3em;
+    font-weight: bold;
+}
+.contentText{
+    box-sizing: border-box;
+    height:100%;
+    width:100%;
+    outline:none;
+    background-color: #666;
+    border-color: #000;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.contentText:focus{
+    box-shadow:0 0 10px 5px rgba(255,255,255,.3);
+}
