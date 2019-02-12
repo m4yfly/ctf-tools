@@ -11,21 +11,11 @@ export default class AsciiItem extends Component {
             content: ''
         }
         this.handleInput = this.handleInput.bind(this);
-        this.handleInputUtf16 = this.handleInputUtf16.bind(this);
-        this.handleInputUtf32 = this.handleInputUtf32.bind(this);
     }
     handleInput(event){
         this.setState({content:event.target.value});
     }
-    handleInputUtf16(event){
-        this.setState({content:ascii.utf_16.decode(event.target.value)});
-    }
-    handleInputUtf32(event){
-        this.setState({content:ascii.utf_32.decode(event.target.value)});
-    }
     render() {
-        var utf_16_value = this.state.content? ascii.utf_16.encode(this.state.content):"";
-        var utf_32_value = this.state.content? ascii.utf_32.encode(this.state.content):"";
         return (
             <div className={commonStyles.main}>
                 <header className={commonStyles.header}>ascii编码转换</header>
@@ -35,24 +25,24 @@ export default class AsciiItem extends Component {
                      onChange={this.handleInput} className={styles.contentText}></textarea>
                 </div>
                 <div className={styles.contentItem}>
-                    <label className={styles.contentLabel} htmlFor="ascii_text">UTF-16</label>
-                    <textarea id="ascii_text" value={utf_16_value} onContextMenu={handleContextMenu}
-                     onChange={this.handleInputUtf16} className={styles.contentText}></textarea>
+                    <label className={styles.contentLabel} htmlFor="utf_16_text">UTF-16</label>
+                    <textarea id="utf_16_text" value={ascii.utf_16.encode(this.state.content)} onContextMenu={handleContextMenu}
+                     readOnly className={styles.contentText}></textarea>
                 </div>
                 <div className={styles.contentItem}>
-                    <label className={styles.contentLabel} htmlFor="ascii_text">UTF-32</label>
-                    <textarea id="ascii_text" value={utf_32_value} onContextMenu={handleContextMenu}
-                     onChange={this.handleInputUtf32} className={styles.contentText}></textarea>
+                    <label className={styles.contentLabel} htmlFor="utf_32_text">UTF-32</label>
+                    <textarea id="utf_32_text" value={ascii.utf_32.encode(this.state.content)} onContextMenu={handleContextMenu}
+                     readOnly className={styles.contentText}></textarea>
                 </div>
                 <div className={styles.contentItem}>
-                    <label className={styles.contentLabel} htmlFor="ascii_text">Unicode</label>
-                    <textarea id="ascii_text" value={this.state.content} onContextMenu={handleContextMenu}
-                     onChange={this.handleInput} className={styles.contentText}></textarea>
+                    <label className={styles.contentLabel} htmlFor="unicode_text">Unicode</label>
+                    <textarea id="unicode_text" value={ascii.unicode.encode(this.state.content)} onContextMenu={handleContextMenu}
+                     readOnly className={styles.contentText}></textarea>
                 </div>
                 <div className={styles.contentItem}>
-                    <label className={styles.contentLabel} htmlFor="ascii_text">Hex</label>
-                    <textarea id="ascii_text" value={this.state.content} onContextMenu={handleContextMenu}
-                     onChange={this.handleInput} className={styles.contentText}></textarea>
+                    <label className={styles.contentLabel} htmlFor="hex_text">Hex</label>
+                    <textarea id="hex_text" value={ascii.hex.encode(this.state.content)} onContextMenu={handleContextMenu}
+                     readOnly className={styles.contentText}></textarea>
                 </div>
             </div>
         )
