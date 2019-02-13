@@ -15,11 +15,13 @@ import PunyCodeItem from './MiscItem/punycode'
 import UUencodeItem from './MiscItem/uuencode'
 import WebSocketItem from './MiscItem/websocket'
 import XXencodeItem from './MiscItem/xxencode'
+import One337Item from './MiscItem/1337'
 
 export default class MiscComponent extends Component {
     render() {
         return (
             <CommonMainList>
+                <One337Item title="Leet Code"/>
                 <AAencodeItem title="AAencode"/>
                 <AryItem title="进制转换"/>
                 <BrainFuckItem title="Brainfuck"/>

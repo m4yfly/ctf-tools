@@ -24,4 +24,4 @@
 * [n3k0](https://github.com/kuraraneko)
 
 ### 
-1337,unicode
+unicode
