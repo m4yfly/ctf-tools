@@ -9,6 +9,7 @@ import EscapeItem from './DecodeItem/escape'
 import TapItem from './DecodeItem/tap'
 import MorseItem from './DecodeItem/morse'
 import AsciiItem from './DecodeItem/ascii'
+import UnicodeItem from './DecodeItem/unicode'
 
 export default class DecodeComponent extends Component {
     render() {
@@ -23,6 +24,7 @@ export default class DecodeComponent extends Component {
                 <TapItem title="敲击码"/>
                 <MorseItem title="Morse编码"/>
                 <AsciiItem title="ASCII编码"/>
+                <UnicodeItem title="Unicode编码"/>
             </CommonMainList>
         )
     }
