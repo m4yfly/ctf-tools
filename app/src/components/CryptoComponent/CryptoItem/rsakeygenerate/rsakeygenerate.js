@@ -19,8 +19,8 @@ function generate_key_pkcs1(length,e){
         e = e.toString();
         return [public_key,private_key,[n,q,p,d,e]];
     }catch(err){
-        console.err(err);
-        console.err('generate key failed');
+        console.error(err);
+        console.error('generate key failed');
         return ['generate key failed','generate key failed',['','','','','']];
     }
    
@@ -45,8 +45,8 @@ function generate_key_pkcs8(length,e){
         e = e.toString();
         return [public_key,private_key,[n,q,p,d,e]];
     }catch(err){
-        console.err(err);
-        console.err('generate key failed');
+        console.error(err);
+        console.error('generate key failed');
         return ['generate key failed','generate key failed',['','','','','']];
     }
     
