@@ -40,6 +40,7 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "tapnode": "^1.0.1",
+    "unfuck": "^0.3.0",
     "vigenere": "^1.0.2",
     "xmorse": "0.0.4"
   }
