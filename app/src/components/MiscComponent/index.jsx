@@ -26,8 +26,8 @@ export default class MiscComponent extends Component {
                 <AryItem title="进制转换"/>
                 <BrainFuckItem title="Brainfuck"/>
                 <BubbleBabbleItem title="BubbleBabble"/>
-                <HandyCodeItem title="HandyCode"/>
-                <HttpHeaderItem title="HTTP(S)响应头查看"/>
+                {/* <HandyCodeItem title="HandyCode"/> */}
+                {/* <HttpHeaderItem title="HTTP(S)响应头查看"/> */}
                 <JJencodeItem title="JJencode"/>
                 <JSFuckItem title="JSfuck"/>
                 <MimeTypeItem title="Mimetypes"/>
@@ -35,7 +35,7 @@ export default class MiscComponent extends Component {
                 <PPencodeItem title="PPencode"/>
                 <PunyCodeItem title="Punycode"/>
                 <UUencodeItem title="UUencode"/>
-                <WebSocketItem title="WebSocket测试"/>
+                {/* <WebSocketItem title="WebSocket测试"/> */}
                 <XXencodeItem title="XXencode"/>
             </CommonMainList>
         )
