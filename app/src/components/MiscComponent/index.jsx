@@ -31,7 +31,7 @@ export default class MiscComponent extends Component {
                 <JJencodeItem title="JJencode"/>
                 <JSFuckItem title="JSfuck"/>
                 <MimeTypeItem title="Mimetypes"/>
-                <PoemCodeItem title="Poemcode"/>
+                {/* <PoemCodeItem title="Poemcode"/> */}
                 <PPencodeItem title="PPencode"/>
                 <PunyCodeItem title="Punycode"/>
                 <UUencodeItem title="UUencode"/>

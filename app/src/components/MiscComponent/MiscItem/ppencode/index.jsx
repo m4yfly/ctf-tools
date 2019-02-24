@@ -1,10 +1,11 @@
 import React, {Component}  from 'react'
-
+import CommonMiscItem from '../../../Common/CommonMiscItem'
+import {fppencode} from './ppencode'
 
 export default class PPencodeItem extends Component {
     render() {
         return (
-            <div>PPencode</div>
+            <CommonMiscItem handleEncode={fppencode} header="ppencode" />
         )
     }
 }
