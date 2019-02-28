@@ -1,7 +1,7 @@
 const assert = require('assert');
 import {encode,decode} from '../../../src/components/MiscComponent/MiscItem/uuencode/uuencode'
 
-describe('#pyencode.js',() => {
+describe('#uuencode.js',() => {
     
     describe('#encode()',() => {
        it("encode('Unix-to-Unix encoding') should equal maana-pta",() => {
