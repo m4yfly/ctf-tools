@@ -46,6 +46,7 @@
     "tapnode": "^1.0.1",
     "unfuck": "^0.3.0",
     "vigenere": "^1.0.2",
-    "xmorse": "0.0.4"
+    "xmorse": "0.0.4",
+    "xxencode": "^1.0.1"
   }
 }
